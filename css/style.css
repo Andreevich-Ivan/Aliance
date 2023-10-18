@@ -27,6 +27,15 @@ body {
  top: 0;
  z-index: 2;
  border-bottom: 1px solid rgba(235, 235, 240, 0.20);
+ transition: background-color 0.2s;
+}
+
+.navbar-light {
+  background-color: #fff;
+  color: #292d33;
+}
+.navbar-light .head-logo-path {
+  fill: #292d33;
 }
 .header {
   padding: 94px;
