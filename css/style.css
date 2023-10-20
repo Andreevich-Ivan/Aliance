@@ -20,7 +20,7 @@ body {
  display: flex;
  align-items: center;
  color: #fff;
- height: 95px;
+ height: 94px;
  position: fixed;
  width: 100%;
  left: 0;
@@ -29,7 +29,6 @@ body {
  border-bottom: 1px solid rgba(235, 235, 240, 0.20);
  transition: background-color 0.2s, height 0.2s;
 }
-
 .navbar-light {
   background-color: #fff;
   color: #292d33;
@@ -39,20 +38,19 @@ body {
   fill: #292d33;
 }
 .header {
-  padding: 94px;
   min-height: 100vh;
 }
 .header-image {
   background-image: url('../img/header-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom -50px;
   position: relative;
 }
 .header-image::before {
   content:"";
   position: absolute;
-  background: rgba(41, 45, 51, 0.6);
+  background: rgba(41, 45, 51, 0.75);
   top: 0;
   left: 0;
   width: 100%;
@@ -103,9 +101,13 @@ body {
  display: inline-block;
  cursor: pointer;
 }
+.header-button {
+  padding: 26px 60px;
+}
 .navbar-button {
   flex-shrink: 0;
   height: 100%;
+  padding: 25px 50px;
 }
 .header-button {
   height: 100%;
@@ -127,10 +129,11 @@ body {
   font-size: 80px;
   line-height: 120%;
   margin: 30px 0;
+  letter-spacing: 0.8px;
+  word-spacing: -1.6px;
 }
 .header-text {
-  max-width: 720px;
-  font-family: Noto Sans;
+ max-width: 720px;
  font-size: 16px;
  font-style: normal;
  font-weight: 400;
@@ -147,7 +150,8 @@ body {
   position: relative;
 }
 .header-features-item {
-  padding: 30px 50px;
+  padding: 27px 49px;
+  width: 288px;
   border: 1px solid rgba(235, 235, 240, 0.2);
 }
 .header-features-item:not(:last-child) {
@@ -157,10 +161,8 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
-}
-.section {
-  margin-top: 150px;
-  margin-bottom: 150px;
+  margin-bottom: 0;
+  margin-top: 18px;
 }
 .section-title {
   font-family: "Bebas Neue Book";
@@ -193,12 +195,14 @@ body {
   margin-left: 30px;
 }
 .steps-title {
-  color: #292D33;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 160%;
-  margin-top: 30px;
-  margin-bottom: 10px;
+    color: #292D33;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 160%;
+    margin-top: 37px;
+    margin-bottom: 13px;
+    word-spacing: 47.1px;
+    letter-spacing: 0.5px;
 }
 .steps-text {
   color: #828A99;
