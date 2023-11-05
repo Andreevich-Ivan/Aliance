@@ -24,7 +24,7 @@ const openMenu = (event) => {
 };
 const closeMenu = (event) => { 
   // функция закрывания меню
-  menu.classList.remove("is-open"); // убирвает класс is-open
+  menu.classList.remove("is-open"); // убирает класс is-open
   mMenutoggle.classList.remove("close-menu");
   document.body.style.overflow="hidden"; // возвращиет прокрутку сайта под меню
   lightModeOff();
@@ -38,7 +38,30 @@ mMenutoggle.addEventListener("click", (event) => {
   menu.classList.contains ("is-open") ? closeMenu() : openMenu();
 });
 
-const swiper = new Swiper('.swiper', {
+const swiperSteps = new Swiper (".steps-slider", {
+  sped: 400,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.steps-button-next',
+    prevEl: '.steps-button-prev',
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    576: {
+      slidesPerView: 2,
+    },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 3,
+    },
+    // when window width is >= 1024px
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+const swiper = new Swiper('.features-slider', {
   speed: 400,
   slidesPerView: 1,
   navigation: {
