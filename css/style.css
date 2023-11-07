@@ -82,19 +82,43 @@ height: 2.75rem;
 }
 .header-nav {
   flex-basis: 100%;
+  align-items: center;
+  height: 100%;
   display: flex;
   list-style: none;
   padding: 0;
   padding-left: 0 3.125rem;
   margin: 0;
 }
+.header-nav-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 .header-nav-item:not(:last-child) {
   margin-right: 4%;
 }
 .header-nav-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
   text-decoration: none;
   font-size: 1rem;
-  Color: inherit; 
+  Color: inherit;
+  position: relative;
+}
+.header-nav-link:after {
+content: "";
+width: 100%;
+height: 2px;
+position: absolute;
+bottom: -1px;
+background-color: #5c8ee6;
+transform: scaleX(0);
+transition: transform 0.2s;
+}
+.header-nav-link:hover:after {
+  transform: scaleX(1);
 }
 .header-phone {
   flex-shrink: 0;
@@ -221,7 +245,7 @@ cursor: pointer;
   display: flex;
   align-items: center;
 }
-.steps-num::after {
+.steps-num:after {
   content: "";
   height: .0625rem;
   background: #ebebf0;
@@ -260,6 +284,10 @@ cursor: pointer;
   background: #5c8ee6;
   width: 2.5rem;
   margin-right: 1.25rem;
+  transition: width 0.2s;
+}
+.steps-link:hover:before {
+width: 3.75rem;
 }
 .steps-buttons {
   display: none;
@@ -276,7 +304,48 @@ align-items: center;
 justify-content: center;
 cursor: pointer;
 }
-
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  text-decoration: none;
+  flex-basis: 33%;
+  border: 1px solid #EBEBF0;
+  position: relative;
+  transition: border 0.2s;
+}
+.card:hover .card-title {
+color: #5c8ee6;
+}
+.card:hover {
+  border-color: #5c8ee6;
+}
+.card-content {
+  padding: 2.5rem 3.125rem;
+}
+.card-title {
+color: #292D33;
+font-size: 1.75rem;
+font-weight: 400;
+line-height: 140%;
+margin-top: 0;
+margin-bottom: 0.625rem;
+transition: color 0.2s;
+}
+.card-text {
+color: #828A99;
+font-size: 1rem;
+line-height: 160%; 
+margin-bottom: 24.625rem;
+}
+.card-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 90%;
+}
 @media (max-width: 1460px) {
   html {
     font-size: 13px;
@@ -317,6 +386,9 @@ cursor: pointer;
   }
   .steps-buttons {
     display: flex;
+  }
+  .card {
+    flex-basis: 100%;
   }
 }
 @media (max-width: 992px) {
