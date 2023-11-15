@@ -222,6 +222,10 @@ cursor: pointer;
   margin-bottom: 0;
   margin-top: 1.125rem;
 }
+.section {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
 .section-title {
   font-family: "Bebas Neue Book";
   font-size: 3.75rem;
@@ -270,23 +274,24 @@ cursor: pointer;
   margin-top: .625rem;
   margin-bottom: 1.25rem;
 }
-.steps-link {
+.button-link {
   display: flex;
   align-items: center;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 600;
   line-height: 160%;
+  color: #5c8ee6;
 }
-.steps-link::before {
+.button-link::before {
   content: "";
   height: .0625rem;
   background: #5c8ee6;
   width: 2.5rem;
-  margin-right: 1.25rem;
+  margin-right: 1rem;
   transition: width 0.2s;
 }
-.steps-link:hover:before {
+.button-link:hover:before {
 width: 3.75rem;
 }
 .steps-buttons {
@@ -371,7 +376,7 @@ margin-bottom: 24.625rem;
 .trademark-card-title {
   font-weight: 400;
   margin: 0;
-  font-style: 1.75rem;
+  font-size: 1.75rem;
   line-height: 160%;
   color: #292D33;
   grid-area: title;
@@ -379,7 +384,7 @@ margin-bottom: 24.625rem;
 .trademark-card-text {
   font-style: normal;
   font-weight: 400;
-  font-style: 1rem;
+  font-size: 1rem;
   line-height: 160%;
   color: #828A99;
   grid-area: text;
@@ -393,6 +398,70 @@ margin-bottom: 24.625rem;
 }
 .trademark-card:hover .trademark-card-title {
   color: #5C8EE6;
+}
+.founder {
+  min-height: 41.25rem;
+  position: relative;
+}
+.founder-photo {
+  position: absolute;
+  left: 0;
+  width: 40%;
+  top: 0;
+  height: 100%;
+  object-fit: cover;
+}
+.founder-content {
+  max-width: 45rem;
+}
+.founder-content-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.founder-text {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 160%;
+  color: #828A99;
+}
+.clients-wrapper {
+  display: flex;
+  gap: 3.125rem;
+}
+.clients-content {
+  flex-basis: 50%;
+}
+.clients-list {
+  list-style-type: none;
+  padding: 0;
+  columns: 2 auto;
+}
+.clients-list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  color: #292D33;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+.clients-logo-list {
+  flex-shrink: 10;
+  display: flex;
+  flex-wrap: wrap;
+}
+.clients-logo-item {
+  display: flex;
+  flex-basis: 33%;
+  border: 1px solid #ebebf0;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.clients-logo {
+  max-width: 100%;
+  width: 70px;
+  height: 70px;
 }
 @media (max-width: 1700px) {
   html {
@@ -449,11 +518,17 @@ margin-bottom: 24.625rem;
   .trademark-card {
     grid-template-columns: auto auto;
   }
+  .founder-content {
+  max-width: 35rem;
+  }
+  .clients-content {
+    flex-basis: 60%;
+  }
 }
 @media (max-width: 992px) {
 
   html {
-    font-style: 12px;
+    font-size: 12px;
   }
   .container {
     max-width: 60rem;
@@ -582,6 +657,9 @@ display: none;
 .trademark-card {
   flex-direction: column;
 }
+.clients-wrapper {
+  flex-direction: column;
+}
 }
 @media (max-width:768px) {
   .container {
@@ -595,6 +673,11 @@ display: none;
   }
   .card {
     flex-basis: 100%;
+  }
+  .founder-photo {
+    position: relative;
+    width: 100%;
+    margin-bottom: 3.125rem;
   }
 }
 @media (max-width:576px) {
@@ -611,5 +694,11 @@ display: none;
     grid-template-areas: 
     "logo title"
     "text text";
+  }
+  .clients-list {
+    columns: 1;
+  }
+  .clients-logo-item {
+    flex-basis: 50%;
   }
 }
