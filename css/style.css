@@ -346,6 +346,62 @@ margin-bottom: 24.625rem;
   z-index: 0;
   width: 90%;
 }
+.trademark-cards {
+  display: flex;
+}
+.trademark-card {
+  flex-basis: 50%;
+  text-decoration: none;
+  border: 1px solid #EBEBF0;
+  transition: border 0.2s;
+  padding: 3.125rem;
+  display: grid;
+  grid-template-columns: 11.25rem 1fr;
+  grid-template-rows: auto 2fr;
+  grid-column-gap: 3.125rem;
+  grid-template-areas:
+  "logo title title"
+  "logo text text";
+}
+.trademark-card-logo {
+  width: 100%;
+  fill: #828A99;
+  grid-area: logo;
+}
+.trademark-card-title {
+  font-weight: 400;
+  margin: 0;
+  font-style: 1.75rem;
+  line-height: 160%;
+  color: #292D33;
+  grid-area: title;
+}
+.trademark-card-text {
+  font-style: normal;
+  font-weight: 400;
+  font-style: 1rem;
+  line-height: 160%;
+  color: #828A99;
+  grid-area: text;
+  margin-top: 0.625rem;
+}
+.trademark-card:hover {
+  border-color: #5c8ee6;
+}
+.trademark-card:hover .trademark-card-logo {
+  fill: #5C8EE6;
+}
+.trademark-card:hover .trademark-card-title {
+  color: #5C8EE6;
+}
+@media (max-width: 1700px) {
+  html {
+    font-size: 14px;
+  }
+  .header-image {
+    background-position: center;
+  }
+}
 @media (max-width: 1460px) {
   html {
     font-size: 13px;
@@ -376,7 +432,7 @@ margin-bottom: 24.625rem;
   }
   .navbar {
     height: 5rem;
-  }
+    }
   .navbar-button {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -388,7 +444,10 @@ margin-bottom: 24.625rem;
     display: flex;
   }
   .card {
-    flex-basis: 100%;
+    flex-basis: 50%;
+  }
+  .trademark-card {
+    grid-template-columns: auto auto;
   }
 }
 @media (max-width: 992px) {
@@ -405,6 +464,7 @@ margin-bottom: 24.625rem;
   .header-logo {
     flex-grow: 1;
     justify-content: center;
+    border: none;
   }
   .mobile-menu-toggle {
     width: 80px;
@@ -412,7 +472,7 @@ margin-bottom: 24.625rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1.8rem 1.5rem;
+    padding: 1.8rem;
     background-repeat: 1px solid rgba(235, 235, 240, 0.2);
   }
   .navbar-light .mobile-menu-line {
@@ -519,16 +579,22 @@ display: none;
 .close-menu .mobile-menu-line:nth-child(3) {
   transform: rotate(-45deg) translateY(-12px);
 }
+.trademark-card {
+  flex-direction: column;
+}
 }
 @media (max-width:768px) {
   .container {
     max-width: 40rem;
   }
   .header-title {
-    font-style: 4rem;
+    font-size: 4rem;
   }
   .header-content {
-    padding-top: 3rem;
+    padding-top: 4rem;
+  }
+  .card {
+    flex-basis: 100%;
   }
 }
 @media (max-width:576px) {
@@ -536,9 +602,14 @@ display: none;
     min-width: 90%;
   }
   .header-title {
-    font-style: 2rem;
+    font-size: 2rem;
   }
   .header-content {
-    padding-top: 3rem;
+    padding-top: 2rem;
+  }
+  .treademark-car {
+    grid-template-areas: 
+    "logo title"
+    "text text";
   }
 }
