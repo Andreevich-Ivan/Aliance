@@ -294,20 +294,23 @@ cursor: pointer;
 .button-link:hover:before {
 width: 3.75rem;
 }
-.steps-buttons {
-  display: none;
-  height: 40px;
+.primary-buttons-wrapper {
+  display: flex;
+  height: 60px;
   justify-content: flex-end;
 }
-.steps-button-prev, 
-.steps-button-next {
+.primary-button-prev, 
+.primary-button-next {
 background: #5c8ee6;
 height: 100%;
-width: 60px;
+width: 80px;
 display: flex;
 align-items: center;
 justify-content: center;
 cursor: pointer;
+}
+.steps-buttons {
+  display: none;
 }
 .cards {
   display: flex;
@@ -444,28 +447,82 @@ margin-bottom: 24.625rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 160%;
+  margin-bottom: 1.2rem;
 }
 .clients-logo-list {
   flex-shrink: 10;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 1.9rem;
 }
 .clients-logo-item {
   display: flex;
-  flex-basis: 33%;
+  flex-basis: 33.33%;
+  min-height: 10rem;
   border: 1px solid #ebebf0;
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  filter: grayscale(100%); 
+  transition: filter 0.2s;
 }
 .clients-logo {
-  filter: grayscale(100%); 
   max-width: 100%;
   width: 70px;
   height: 70px;
 }
-.clients-logo:hover {
+.clients-logo-item:hover {
   filter: grayscale(0%); 
+}
+.blog-card {
+  display: flex;
+  position: relative;
+  min-height: 25rem;
+  flex-direction: column;
+  text-decoration: none;
+  justify-content: flex-end;
+  color: #fff;
+  padding: 3.125rem;
+}
+.blog-card::before {
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(41, 45, 51, 0.6);
+  z-index: -1;
+}
+.blog-card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.blog-card-title {
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.blog-card-text {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0;
+}
+.blog-slider-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: space-between;
 }
 @media (max-width: 1700px) {
   html {
@@ -513,6 +570,13 @@ margin-bottom: 24.625rem;
   .slider-buttons {
     display: flex;
   }
+  .primary-buttons-wrapper {
+    height: 40px;
+  }
+  .primary-button-prev, 
+  .primary-button-next {
+  width: 60px;
+}
   .steps-buttons {
     display: flex;
   }
