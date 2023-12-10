@@ -38,14 +38,23 @@ body {
 .navbar-light {
   background-color: #fff;
   color: #292d33;
-  height: 4.625rem;
+}
+.logo-dark {
+  display: none;
+}
+.navbar-light .logo-light {
+  display: none;
+}
+.navbar-light .logo-dark {
+  display: block;
+}
+.navbar-scroll {
+  height: 4.5rem;
 }
 .phone-icon {
   fill:#5C8EE6
 }
-.logo {
-  display: none;
-}
+
 .logo-svg {
 width: 9rem;
 height: 2.75rem;
@@ -87,7 +96,7 @@ height: 2.75rem;
   display: flex;
   list-style: none;
   padding: 0;
-  padding-left: 0 3.125rem;
+  padding-left: 3.125rem;
   margin: 0;
 }
 .header-nav-item {
@@ -752,6 +761,7 @@ color: inherit;
   transform: translateX(0);
   visibility: visible;
   opacity: 1;
+  transition: transform 0.3s, opacity 0.3s;
 }
 .modal-is-open .modal-dialog {
   transform: translateY(0);
@@ -764,8 +774,6 @@ color: inherit;
   padding: 2.5rem 3.125rem;
   position: relative;
   transform: translateY(-10%);
-  opacity: 0;
-  transition: transform 0.3s, opacity 0.3s;
 }
 .modal-close {
   display: block;
@@ -900,7 +908,6 @@ color: inherit;
     flex-direction: column;
     justify-content: space-between;
     padding: 1.8rem;
-    background-repeat: 1px solid rgba(235, 235, 240, 0.2);
   }
   .navbar-light .mobile-menu-line {
     background-color: #333;
