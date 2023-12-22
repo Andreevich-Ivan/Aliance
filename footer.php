@@ -25,9 +25,10 @@
                 <input
                   id="user-phone"
                   type="tel"
-                  class="input"
                   name="userphone"
+                  class="input phone-mask"
                   placeholder=" "
+                  maxlength="30"
                   required
                 />
                 <label class="input-group-label" for="user-phone"
@@ -242,5 +243,6 @@
     <script src="/js/swiper-bundle.min.js"></script>
     <script src="/js/just-validate.production.min.js"></script>
     <script src="/js/main.js"></script>
+    
   </body>
 </html>
